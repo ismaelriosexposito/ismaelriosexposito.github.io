@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fbf7f1">
   <meta name="description" content="La guía personal de compras de Janella: marcas, tiendas y enlaces directos en Cantabria.">
-  <meta property="og:title" content="Para Janella · guía de compras en Cantabria">
-  <meta property="og:description" content="Tiendas favoritas, buenas oportunidades y enlaces directos para comprar con calma.">
+  <meta property="og:title" content="Janella Valentina Shop · tiendas y ofertas en Cantabria">
+  <meta property="og:description" content="Todas tus tiendas, ofertas y enlaces directos en un solo lugar.">
   <meta property="og:type" content="website">
-  <title>Para Janella · guía de compras en Cantabria</title>
+  <title>Janella Valentina Shop · tiendas y ofertas en Cantabria</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
@@ -75,10 +75,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
 }
-.wordmark { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-size: 1rem; letter-spacing: -.04em; }
-.wordmark strong { font-weight: 700; }
-.wordmark-icon { color: var(--coral); font-size: 1.45rem; line-height: 1; }
-.topbar-note { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .78rem; letter-spacing: .015em; }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.wordmark-label { display: flex; flex-direction: column; gap: 3px; line-height: 1; }
+.wordmark-label > span { color: var(--coral-deep); font-size: .58rem; font-weight: 800; letter-spacing: .2em; }
+.wordmark strong { font-size: .95rem; font-weight: 700; letter-spacing: .025em; }
+.wordmark-icon { color: var(--coral); font-size: 1.65rem; line-height: 1; }
+.topbar-note { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .76rem; letter-spacing: .015em; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #71927b; }
 
 .hero {
@@ -253,8 +255,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 @media (max-width: 560px) {
   .site-shell { padding: 0 20px; }
   .topbar { min-height: 62px; }
-  .wordmark { font-size: .94rem; }
-  .topbar-note { font-size: .67rem; }
+  .wordmark strong { font-size: .82rem; }
+  .wordmark-label > span { font-size: .52rem; }
+  .wordmark-icon { font-size: 1.4rem; }
+  .topbar-note { max-width: 108px; font-size: .61rem; line-height: 1.25; }
   .hero { display: block; min-height: 0; margin: 15px 0 55px; }
   .hero-copy { padding: 42px 25px 29px; }
   .hero h1 { font-size: clamp(3rem, 13vw, 4.5rem); }
@@ -298,29 +302,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   <a class="skip-link" href="#tiendas">Saltar a las tiendas</a>
   <div class="site-shell">
     <header class="topbar">
-      <a class="wordmark" href="#inicio" aria-label="Para Janella, inicio">
+      <a class="wordmark" href="#inicio" aria-label="Janella Valentina Shop, inicio">
         <span class="wordmark-icon" aria-hidden="true">✳</span>
-        <span>para <strong>janella</strong></span>
+        <span class="wordmark-label"><span>JANELLA</span><strong>VALENTINA SHOP</strong></span>
       </a>
-      <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> Tu guía de compras en Cantabria</span>
+      <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> Tus tiendas y ofertas, en un solo enlace</span>
     </header>
 
     <main id="inicio">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Una guía hecha para ti <span aria-hidden="true">·</span> Cantabria</p>
-          <h1 id="hero-title">Un buen hallazgo<br>te está <em>esperando.</em></h1>
-          <p class="hero-description">Tus tiendas favoritas, reunidas en un solo sitio. Elige dónde mirar y entra directamente en la web de cada marca.</p>
-          <a class="hero-link" href="#tiendas">Vamos de tiendas <span aria-hidden="true">↓</span></a>
+          <p class="eyebrow">Tu shopping personal <span aria-hidden="true">·</span> Cantabria</p>
+          <h1 id="hero-title">Janella<br><em>Valentina<br>Shop.</em></h1>
+          <p class="hero-description">Todas tus tiendas, ofertas y enlaces directos en un solo lugar. Elige una zona o encuentra tu marca favorita.</p>
+          <a class="hero-link" href="#tiendas">Explora todas las tiendas <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="sun-shape"></div>
           <span class="sparkle sparkle-one">✳</span>
           <span class="sparkle sparkle-two">✦</span>
-          <div class="hero-note"><span>tu próxima</span><strong>pieza<br>favorita</strong><span class="note-star">✳</span></div>
-          <span class="hero-caption">CANTABRIA · 2026</span>
+          <div class="hero-note"><span>todo en</span><strong>un solo<br>enlace</strong><span class="note-star">✳</span></div>
+          <span class="hero-caption">TIENDAS · OFERTAS · CANTABRIA</span>
         </div>
-        <div class="hero-stamp" aria-hidden="true"><span>curated<br>for you</span><strong>J.</strong></div>
+        <div class="hero-stamp" aria-hidden="true"><span>hecho<br>para ti</span><strong>JV</strong></div>
       </section>
 
       <section class="explore" id="tiendas" aria-labelledby="explore-title">
@@ -385,8 +389,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
     </main>
 
     <footer class="footer">
-      <a class="footer-mark" href="#inicio">✳ para janella</a>
-      <p>Hecho con cariño para tus próximos hallazgos.</p>
+      <a class="footer-mark" href="#inicio">✳ Janella Valentina Shop</a>
+      <p>Tus tiendas favoritas, reunidas en un solo lugar.</p>
       <a class="back-top" href="#inicio">Volver arriba ↑</a>
     </footer>
   </div>
