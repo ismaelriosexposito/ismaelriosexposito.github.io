@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f1">
+  <meta name="description" content="La guía personal de compras de Janella: marcas, tiendas y enlaces directos en Cantabria.">
+  <meta property="og:title" content="Para Janella · guía de compras en Cantabria">
+  <meta property="og:description" content="Tiendas favoritas, buenas oportunidades y enlaces directos para comprar con calma.">
+  <meta property="og:type" content="website">
+  <title>Para Janella · guía de compras en Cantabria</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+  color-scheme: light;
+  --paper: #fbf7f1;
+  --paper-deep: #f4ece3;
+  --ink: #29231f;
+  --muted: #746b64;
+  --line: #e8ddd2;
+  --coral: #df695d;
+  --coral-deep: #ad443a;
+  --peach: #f5d8ca;
+  --lavender: #e8e1ed;
+  --green: #496f5b;
+  --yellow: #f0ce73;
+  --white: #fffdfa;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 3px solid #8b5e8c;
+  outline-offset: 3px;
+}
+.skip-link, .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link:focus {
+  z-index: 10;
+  width: auto;
+  height: auto;
+  clip: auto;
+  margin: 12px;
+  padding: 10px 14px;
+  background: var(--white);
+  border-radius: 8px;
+}
+.site-shell { max-width: 1800px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 68px); }
+.topbar {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-size: 1rem; letter-spacing: -.04em; }
+.wordmark strong { font-weight: 700; }
+.wordmark-icon { color: var(--coral); font-size: 1.45rem; line-height: 1; }
+.topbar-note { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .78rem; letter-spacing: .015em; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #71927b; }
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  min-height: 470px;
+  margin: 28px 0 84px;
+  overflow: hidden;
+  background: #f1ded4;
+  border-radius: 5px;
+}
+.hero-copy { position: relative; z-index: 2; align-self: center; padding: 62px 8% 65px 11%; }
+.eyebrow { margin: 0 0 13px; color: var(--coral-deep); font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.hero h1 { max-width: 640px; margin: 0; font-family: var(--serif); font-size: clamp(3.15rem, 6.6vw, 6rem); font-weight: 600; line-height: .99; letter-spacing: -.055em; }
+.hero h1 em { color: var(--coral-deep); font-weight: 600; }
+.hero-description { max-width: 430px; margin: 22px 0 22px; color: #5f554f; font-size: .98rem; }
+.hero-link { display: inline-flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--ink); text-decoration: none; font-size: .86rem; font-weight: 700; }
+.hero-link span { color: var(--coral-deep); font-size: 1.15rem; transition: transform .2s ease; }
+.hero-link:hover span { transform: translateY(3px); }
+.hero-art { position: relative; min-height: 420px; overflow: hidden; background: #e9c8b8; }
+.sun-shape { position: absolute; width: min(75%, 400px); aspect-ratio: 1; top: 50%; left: 50%; border-radius: 50%; background: #f1cc78; transform: translate(-46%, -50%); }
+.sun-shape::before { position: absolute; content: ''; inset: 12%; border: 1px solid rgba(102, 73, 42, .18); border-radius: 50%; }
+.hero-note { position: absolute; top: 50%; left: 50%; width: 205px; min-height: 235px; padding: 29px 26px; background: var(--paper); box-shadow: 0 20px 55px rgba(68, 38, 26, .13); transform: translate(-45%, -44%) rotate(5deg); }
+.hero-note > span:first-child { color: var(--muted); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; }
+.hero-note strong { display: block; margin-top: 14px; font-family: var(--serif); font-size: 2.45rem; font-weight: 600; line-height: .98; letter-spacing: -.04em; }
+.note-star { position: absolute; right: 23px; bottom: 18px; color: var(--coral); font-size: 1.6rem; }
+.sparkle { position: absolute; z-index: 1; color: var(--coral-deep); }
+.sparkle-one { top: 17%; left: 21%; font-size: 1.9rem; }
+.sparkle-two { right: 14%; bottom: 18%; color: var(--paper); font-size: 2.4rem; }
+.hero-caption { position: absolute; bottom: 22px; right: 25px; color: #65524a; font-size: .61rem; letter-spacing: .17em; }
+.hero-stamp { position: absolute; z-index: 3; top: 26px; right: calc(43% - 34px); width: 72px; height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(41,35,31,.48); border-radius: 50%; background: var(--paper); transform: rotate(12deg); }
+.hero-stamp span { font-size: .5rem; line-height: 1.05; text-align: center; text-transform: uppercase; letter-spacing: .07em; }
+.hero-stamp strong { color: var(--coral-deep); font-family: var(--serif); font-size: 1.05rem; line-height: 1; }
+
+.explore { padding-bottom: 62px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 23px; }
+.section-heading .eyebrow { margin-bottom: 5px; }
+.section-heading h2, .results-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 600; line-height: 1.15; letter-spacing: -.04em; }
+.section-aside { margin: 0 0 5px; color: var(--muted); font-family: var(--serif); font-size: .98rem; font-style: italic; }
+.location-tabs { display: flex; gap: 10px; margin: 0 0 24px; padding: 0 0 18px; overflow-x: auto; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.location-tab { flex: 0 0 auto; min-height: 46px; display: inline-flex; align-items: center; gap: 9px; padding: 0 17px; border: 1px solid var(--line); border-radius: 3px; background: transparent; color: #514941; cursor: pointer; font-size: .81rem; font-weight: 600; transition: background .18s ease, border-color .18s ease, color .18s ease; }
+.location-tab > span:first-child:not(.tab-number) { color: var(--coral); font-size: 1.1rem; }
+.location-tab:hover { border-color: #c9aaa0; }
+.location-tab.is-active { border-color: var(--ink); background: var(--ink); color: var(--white); }
+.location-tab.is-active .tab-number { color: #e9b4a6; }
+.tab-number { color: #a49a91; font-size: .65rem; font-weight: 700; letter-spacing: .06em; }
+
+.browse-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(26px, 4vw, 58px); align-items: start; }
+.shop-sidebar { min-width: 0; }
+.shop-sidebar details { position: sticky; top: 18px; }
+.shop-sidebar summary { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; color: var(--muted); cursor: pointer; font-size: .67rem; font-weight: 700; letter-spacing: .14em; list-style: none; text-transform: uppercase; }
+.shop-sidebar summary::-webkit-details-marker { display: none; }
+.summary-count { color: var(--coral-deep); font-size: .65rem; letter-spacing: .03em; }
+.shop-menu { max-height: min(68vh, 680px); display: flex; flex-direction: column; gap: 2px; overflow-y: auto; padding-right: 5px; scrollbar-color: #d9c8bd transparent; scrollbar-width: thin; }
+.shop-menu button { min-height: 38px; flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: 0; border-radius: 3px; background: transparent; color: #675e57; cursor: pointer; text-align: left; font-size: .78rem; transition: background .16s ease, color .16s ease; }
+.shop-menu button:hover { background: #f2e9e2; color: var(--ink); }
+.shop-menu button.is-active { background: #ecdfd5; color: var(--ink); font-weight: 700; }
+.shop-menu .menu-location { padding: 15px 10px 4px; color: #a3978e; font-size: .59rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.shop-menu .menu-location:first-child { padding-top: 4px; }
+.shop-menu .menu-count { color: #a3978e; font-size: .65rem; }
+
+.results { min-width: 0; }
+.results-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.results-heading .eyebrow { margin-bottom: 4px; }
+.results-heading h2 { font-size: clamp(1.45rem, 2.5vw, 1.85rem); }
+.result-count { flex: 0 0 auto; margin: 0 0 4px; color: var(--muted); font-size: .74rem; }
+.toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 17px; }
+.search-box { min-width: 150px; min-height: 44px; flex: 1; display: flex; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid var(--line); background: var(--white); }
+.search-icon { color: #93867e; font-size: 1.45rem; line-height: 1; transform: rotate(-20deg); }
+.search-box input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: .82rem; }
+.search-box input::placeholder { color: #9a9089; }
+.search-box kbd { display: grid; width: 21px; height: 21px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); color: #9a9089; font-family: var(--sans); font-size: .65rem; }
+.favorites-filter { min-height: 44px; display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; border: 1px solid var(--line); background: transparent; color: #5c524b; cursor: pointer; font-size: .77rem; font-weight: 600; white-space: nowrap; }
+.favorites-filter > span:first-child { color: var(--coral); font-size: 1.1rem; }
+.favorites-filter #favorites-count { color: var(--muted); font-size: .68rem; }
+.favorites-filter[aria-pressed="true"] { border-color: #d9b5a9; background: #f2e4dc; color: var(--ink); }
+
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.store-card { position: relative; min-height: 310px; display: flex; flex-direction: column; align-items: flex-start; padding: 18px 18px 16px; border: 1px solid var(--line); background: var(--white); transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.store-card:hover { transform: translateY(-3px); border-color: #d5b9ad; box-shadow: 0 12px 24px rgba(65, 44, 32, .07); }
+.card-topline { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 17px; }
+.card-place { color: #9a7569; font-size: .61rem; font-weight: 700; letter-spacing: .1em; line-height: 1.3; text-transform: uppercase; }
+.favorite-button { width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; margin: -7px -7px -7px 0; border: 0; border-radius: 50%; background: transparent; color: #958982; cursor: pointer; font-size: 1.25rem; transition: background .16s ease, color .16s ease; }
+.favorite-button:hover { background: #f7ece7; color: var(--coral-deep); }
+.favorite-button[aria-pressed="true"] { color: var(--coral-deep); }
+.store-card h3 { margin: 0; font-family: var(--serif); font-size: 1.24rem; font-weight: 600; letter-spacing: -.025em; line-height: 1.15; }
+.card-status { display: inline-flex; align-items: center; min-height: 24px; margin: 9px 0 9px; padding: 3px 7px; background: #eef1e9; color: #506849; font-size: .61rem; font-weight: 700; letter-spacing: .02em; }
+.card-status.neutral { background: #f0ece8; color: #756b63; }
+.card-status.soon { background: #f9edcf; color: #825e21; }
+.store-card p { margin: 0 0 17px; color: var(--muted); font-size: .77rem; line-height: 1.5; }
+.card-offer { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin: 0 0 13px; padding: 10px 11px; border-left: 3px solid #c9bba6; background: #f5f1e9; }
+.card-offer.offer-confirmed { border-left-color: #5a866c; background: #edf4ed; }
+.card-offer.offer-live { border-left-color: #5a866c; background: #edf4ed; }
+.card-offer.offer-pending { border-left-color: #c9bba6; background: #f5f1e9; }
+.card-offer > span { color: #796a54; font-size: .57rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.card-offer strong { color: var(--ink); font-size: .74rem; line-height: 1.35; }
+.card-offer.offer-live strong { color: #3f6e50; font-size: .76rem; }
+.promo-tags, .promo-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.promo-legend { margin-top: 13px; }
+.promo-tag { display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 999px; font-size: .58rem; font-weight: 800; line-height: 1.25; }
+.tag-discount { background: #deeddf; color: #315f3e; }
+.tag-extra { background: #f8e9bd; color: #795914; }
+.tag-bundle { background: #f8dfd9; color: #8c453a; }
+.tag-pending { background: #eae6e0; color: #746b64; }
+.offer-channels { display: flex; flex-wrap: wrap; gap: 4px; margin: 3px 0; }
+.channel-tag { display: inline-flex; gap: 3px; padding: 3px 6px; border-radius: 2px; font-size: .57rem; line-height: 1.3; }
+.channel-tag b { font-weight: 800; }
+.channel-tag.channel-active { background: #e0eee1; color: #3c654b; }
+.channel-tag.channel-pending { background: #ece7df; color: #72675b; }
+.card-offer small { color: var(--muted); font-size: .63rem; line-height: 1.4; }
+.card-offer a { margin-top: 2px; color: var(--coral-deep); font-size: .65rem; font-weight: 700; text-decoration: none; }
+.store-link { min-height: 38px; display: inline-flex; align-items: center; gap: 9px; margin-top: auto; padding: 0 12px; background: var(--ink); color: var(--white); text-decoration: none; font-size: .73rem; font-weight: 700; transition: background .16s ease; }
+.store-link:hover { background: var(--coral-deep); }
+.store-link span { color: #efb7a7; font-size: 1rem; }
+.category-tabs { margin: -12px 0 16px; }
+.category-tabs .location-tab { font-size: .84rem; font-weight: 700; }
+.sale-note { display: block; margin: -8px 0 27px; padding: 18px 20px; border: 1px solid #e6cc86; border-left: 4px solid #d5aa42; background: linear-gradient(110deg, #fff4d7, #fff9e9); color: var(--ink); }
+.sale-note-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; margin-bottom: 13px; }
+.sale-note strong { font-family: var(--serif); font-size: 1.08rem; }
+.sale-note > span { display: block; margin-top: 4px; color: var(--muted); font-size: .77rem; line-height: 1.5; }
+.sale-note-heading > span { color: var(--coral-deep); font-size: .69rem; font-weight: 700; }
+.sale-rules { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.sale-rule { min-height: 85px; padding: 11px 12px; background: rgba(255,255,255,.74); border: 1px solid rgba(230,204,134,.58); }
+.sale-rule b { display: block; margin-bottom: 5px; color: #8b5b4f; font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
+.sale-rule span { display: block; color: var(--muted); font-size: .7rem; line-height: 1.45; }
+.sale-note-footer { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-top: 11px; }
+.sale-note a { color: var(--coral-deep); font-size: .73rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.sale-note small { color: #8b7f76; font-size: .65rem; line-height: 1.4; }
+.card-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+.store-link-secondary { border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.store-link-secondary span { color: var(--coral-deep); }
+.store-link-secondary:hover { background: #f5ece6; color: var(--ink); }
+.empty-state { margin: 0; padding: 34px 20px; border: 1px dashed #d8c9bf; color: var(--muted); text-align: center; font-size: .88rem; }
+
+.little-reminder { display: flex; align-items: center; gap: 15px; margin: 6px 0 60px; padding: 17px 20px; background: #f1e8e1; }
+.reminder-icon { color: var(--coral-deep); font-size: 1.2rem; }
+.little-reminder p { flex: 1; margin: 0; color: #655a52; font-size: .77rem; }
+.little-reminder strong { color: var(--ink); }
+.reminder-tail { color: #c4776b; font-size: .88rem; }
+.footer { min-height: 75px; display: flex; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line); color: var(--muted); }
+.footer p { margin: 0; font-family: var(--serif); font-size: .83rem; font-style: italic; }
+.footer-mark, .back-top { color: var(--ink); text-decoration: none; font-size: .73rem; font-weight: 700; }
+.footer-mark { color: var(--coral-deep); }
+.back-top { font-weight: 500; }
+
+@media (min-width: 1120px) {
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1550px) {
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; }
+  .browse-layout { grid-template-columns: 235px minmax(0, 1fr); }
+}
+@media (max-width: 800px) {
+  .site-shell { padding: 0 5%; }
+  .hero { grid-template-columns: 1fr .76fr; min-height: 400px; margin-bottom: 66px; }
+  .hero-copy { padding: 48px 2% 48px 8%; }
+  .hero-art { min-height: 380px; }
+  .hero-note { width: 170px; min-height: 204px; padding: 24px 20px; }
+  .hero-note strong { font-size: 2.1rem; }
+  .hero-stamp { right: calc(36% - 25px); transform: scale(.85) rotate(12deg); }
+  .browse-layout { grid-template-columns: 1fr; gap: 17px; }
+  .shop-sidebar details { position: static; }
+  .shop-sidebar summary { min-height: 44px; margin: 0; padding: 0 13px; border: 1px solid var(--line); background: var(--white); cursor: pointer; letter-spacing: .08em; }
+  .shop-sidebar summary::after { content: '+'; color: var(--coral-deep); font-size: 1.1rem; }
+  .shop-sidebar details[open] summary::after { content: '−'; }
+  .shop-menu { max-height: 275px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; margin-top: 8px; padding: 7px; border: 1px solid var(--line); background: var(--white); }
+  .shop-menu .menu-location { grid-column: 1 / -1; }
+  .shop-menu button { min-height: 42px; }
+  .section-heading h2 { font-size: 2.1rem; }
+}
+@media (max-width: 560px) {
+  .site-shell { padding: 0 20px; }
+  .topbar { min-height: 62px; }
+  .wordmark { font-size: .94rem; }
+  .topbar-note { font-size: .67rem; }
+  .hero { display: block; min-height: 0; margin: 15px 0 55px; }
+  .hero-copy { padding: 42px 25px 29px; }
+  .hero h1 { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-description { margin: 16px 0 15px; font-size: .9rem; }
+  .hero-art { min-height: 245px; }
+  .sun-shape { width: 210px; }
+  .hero-note { width: 142px; min-height: 164px; padding: 18px 17px; }
+  .hero-note strong { margin-top: 10px; font-size: 1.8rem; }
+  .note-star { right: 14px; bottom: 12px; font-size: 1.2rem; }
+  .sparkle-one { top: 13%; left: 22%; }
+  .hero-caption { bottom: 13px; right: 15px; font-size: .53rem; }
+  .hero-stamp { top: auto; right: 13px; bottom: 218px; transform: scale(.78) rotate(12deg); }
+  .section-heading { display: block; margin-bottom: 19px; }
+  .section-heading h2 { font-size: 1.9rem; }
+  .section-aside { margin-top: 7px; font-size: .86rem; }
+  .location-tabs { gap: 7px; margin-right: -20px; padding-right: 20px; padding-bottom: 13px; }
+  .location-tab { min-height: 43px; gap: 7px; padding: 0 12px; font-size: .74rem; }
+  .results-heading h2 { font-size: 1.55rem; }
+  .toolbar { align-items: stretch; flex-direction: column; }
+  .sale-note { padding: 15px; }
+  .sale-rules { grid-template-columns: 1fr; gap: 6px; }
+  .sale-rule { min-height: 0; }
+  .sale-note-heading, .sale-note-footer { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .favorites-filter { justify-content: center; }
+  .cards { grid-template-columns: 1fr; gap: 10px; }
+  .store-card { min-height: 0; padding: 16px; }
+  .card-topline { margin-bottom: 10px; }
+  .little-reminder { align-items: flex-start; gap: 11px; margin-bottom: 41px; padding: 15px; }
+  .little-reminder p { font-size: .72rem; }
+  .reminder-tail { display: none; }
+  .footer { min-height: 78px; flex-wrap: wrap; justify-content: space-between; padding: 14px 0; }
+  .footer p { order: 3; width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+</style>
+  </head>
+<body>
+  <a class="skip-link" href="#tiendas">Saltar a las tiendas</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#inicio" aria-label="Para Janella, inicio">
+        <span class="wordmark-icon" aria-hidden="true">✳</span>
+        <span>para <strong>janella</strong></span>
+      </a>
+      <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> Tu guía de compras en Cantabria</span>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Una guía hecha para ti <span aria-hidden="true">·</span> Cantabria</p>
+          <h1 id="hero-title">Un buen hallazgo<br>te está <em>esperando.</em></h1>
+          <p class="hero-description">Tus tiendas favoritas, reunidas en un solo sitio. Elige dónde mirar y entra directamente en la web de cada marca.</p>
+          <a class="hero-link" href="#tiendas">Vamos de tiendas <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun-shape"></div>
+          <span class="sparkle sparkle-one">✳</span>
+          <span class="sparkle sparkle-two">✦</span>
+          <div class="hero-note"><span>tu próxima</span><strong>pieza<br>favorita</strong><span class="note-star">✳</span></div>
+          <span class="hero-caption">CANTABRIA · 2026</span>
+        </div>
+        <div class="hero-stamp" aria-hidden="true"><span>curated<br>for you</span><strong>J.</strong></div>
+      </section>
+
+      <section class="explore" id="tiendas" aria-labelledby="explore-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Encuentra tu plan</p>
+            <h2 id="explore-title">¿Por dónde empezamos?</h2>
+          </div>
+          <p class="section-aside">Un paseo, tres maneras de comprar.</p>
+        </div>
+
+        <nav class="location-tabs category-tabs" aria-label="Elegir sección">
+          <button class="location-tab is-active" type="button" data-category="fashion" aria-pressed="true">Ropa y accesorios</button>
+          <button class="location-tab" type="button" data-category="beauty" aria-pressed="false">Perfumería y cosmética</button>
+        </nav>
+
+        <nav class="location-tabs" aria-label="Filtrar tiendas por ubicación">
+          <button class="location-tab is-active" type="button" data-location="all" aria-pressed="true"><span aria-hidden="true">✳</span> Todo</button>
+          <button class="location-tab" type="button" data-location="eci" aria-pressed="false"><span class="tab-number">01</span> El Corte Inglés</button>
+          <button class="location-tab" type="button" data-location="valle" aria-pressed="false"><span class="tab-number">02</span> Valle Real</button>
+          <button class="location-tab" type="button" data-location="centro" aria-pressed="false"><span class="tab-number">03</span> Centro Santander</button>
+        </nav>
+
+        <aside class="sale-note" id="sale-note" aria-live="polite"></aside>
+
+        <div class="browse-layout">
+          <aside class="shop-sidebar" aria-label="Menú de tiendas">
+            <details id="shop-details">
+              <summary><span>Explorar por tienda</span><span class="summary-count" id="shop-count"></span></summary>
+              <nav class="shop-menu" id="shop-menu" aria-label="Elegir una tienda"></nav>
+            </details>
+          </aside>
+
+          <section class="results" aria-labelledby="view-title">
+            <div class="results-heading">
+              <div>
+                <p class="eyebrow" id="results-kicker">Tu selección</p>
+                <h2 id="view-title">Todas las tiendas</h2>
+              </div>
+              <p class="result-count" id="counter" aria-live="polite"></p>
+            </div>
+            <div class="toolbar">
+              <label class="search-box">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <span class="visually-hidden">Buscar una tienda</span>
+                <input id="search" type="search" placeholder="Busca una marca…" autocomplete="off">
+                <kbd aria-hidden="true">/</kbd>
+              </label>
+              <button class="favorites-filter" id="favorites-filter" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Mis favoritas <span id="favorites-count">0</span></button>
+            </div>
+            <div class="cards" id="cards" aria-label="Tiendas disponibles"></div>
+            <p class="empty-state" id="empty-state" hidden>No encontramos tiendas con ese nombre. Prueba con otra búsqueda.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="little-reminder" aria-label="Consejo">
+        <span class="reminder-icon" aria-hidden="true">✳</span>
+        <p><strong>Un pequeño tip:</strong> las promociones y el stock cambian. Comprueba la oferta y tu talla en la web de la marca antes de salir.</p>
+        <span class="reminder-tail" aria-hidden="true">♥</span>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer-mark" href="#inicio">✳ para janella</a>
+      <p>Hecho con cariño para tus próximos hallazgos.</p>
+      <a class="back-top" href="#inicio">Volver arriba ↑</a>
+    </footer>
+  </div>
+
+<script>
+// Para añadir una tienda, copia un objeto y completa sus campos.
+// zone: eci (El Corte Inglés), valle (Valle Real) o centro (Centro Santander).
+const stores = [
+  { name: 'Sfera', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Moda femenina, accesorios y básicos.', url: 'https://www.sfera.com/es/mujer/' },
+  { name: 'Easy Wear', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Moda casual y básicos para mujer.', url: 'https://www.elcorteingles.es/marcas/easy-wear/' },
+  { name: 'Noon', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina y prendas de ocasión.', url: 'https://noonspain.com/', promotion: { discount: '−30% en toda la colección', channels: [{ label: 'Web', state: 'Activa' }, { label: 'App', state: 'Activa' }, { label: 'Tienda física', state: 'Desde jue. 26/11' }], validUntil: 'Fecha de fin no indicada', updatedAt: '26/11/2026', source: 'https://noonspain.com/' } },
+  { name: 'Woman El Corte Inglés', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Colección de moda femenina de El Corte Inglés.', url: 'https://www.elcorteingles.es/moda-mujer/' },
+  { name: 'Green Coast', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Moda casual y urbana para mujer.', url: 'https://www.elcorteingles.es/marcas/green-coast/' },
+  { name: 'Tintoretto', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Moda femenina y prendas de vestir.', url: 'https://www.elcorteingles.es/marcas/tintoretto/' },
+  { name: 'The-Are', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina, vestidos de invitada y prendas de ocasión.', url: 'https://www.the-are.com/' },
+  { name: 'Zadig & Voltaire', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina, bolsos, calzado y accesorios.', url: 'https://zadig-et-voltaire.com/eu/es/' },
+  { name: 'YUXUS', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda urbana y prendas casuales para mujer.', url: 'https://www.yuxus.com/' },
+  { name: 'Victoria', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Calzado y zapatillas para mujer.', url: 'https://www.victoriashoes.com/es_ES/home' },
+  { name: 'Bimba y Lola', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda, bolsos y complementos.', url: 'https://www.bimbaylola.com/es_es/' },
+  { name: 'Brownie', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina joven y casual.', url: 'https://www.browniespain.com/es-es/' },
+  { name: 'Barbour', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda y prendas de inspiración británica.', url: 'https://www.barbour.com/row/' },
+  { name: 'Carolina Herrera', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda y accesorios femeninos.', url: 'https://chcarolinaherrera.com/es/es/' },
+  { name: 'Gloria Ortiz', zone: 'eci', area: 'El Corte Inglés', status: 'Marca de El Corte Inglés', tone: 'live', desc: 'Calzado y complementos femeninos.', url: 'https://www.micolet.com/gloria-ortiz' },
+  { name: 'Desigual', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina y accesorios.', url: 'https://www.desigual.com/es_ES/' },
+  { name: 'Adolfo Domínguez', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda femenina y complementos.', url: 'https://www.adolfodominguez.com/es-es/mujer/' },
+  { name: 'Lauren Ralph Lauren', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Colección femenina de Ralph Lauren.', url: 'https://www.ralphlauren.es/' },
+  { name: 'Hugo Boss Woman', zone: 'eci', area: 'El Corte Inglés', status: 'Marca independiente', tone: 'live', desc: 'Moda y accesorios femeninos BOSS.', url: 'https://www.hugoboss.com/es/home' },
+  { name: 'Todas las marcas · ECI', zone: 'eci', area: 'El Corte Inglés', status: 'Catálogo completo', tone: 'live', desc: 'Consulta el catálogo oficial completo de moda y accesorios de El Corte Inglés Santander.', url: 'https://centroscomerciales.elcorteingles.es/centroscomerciales/es/eci/centros/centro-comercial-bahia-de-santander/catalogo-de-marcas/moda-y-accesorios' },
+  { name: 'Mango', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'live', desc: 'Abre la web de Mango y entra en la promoción activa.', url: 'https://shop.mango.com/es/es' },
+  { name: 'H&M', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'live', desc: 'Web oficial de mujer; consulta las promociones activas en portada.', url: 'https://www2.hm.com/es_es/mujer.html' },
+  { name: 'Zara', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'live', desc: 'Web oficial de mujer. Abre “Special Prices” desde su menú.', url: 'https://www.zara.com/es/es/mujer-l1000.html' },
+  { name: 'Primark', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Página oficial de moda de mujer; consulta novedades y disponibilidad en tienda.', url: 'https://www.primark.com/es-es/c/mujer' },
+  { name: 'Stradivarius', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Web oficial española de Stradivarius para revisar novedades y promociones.', url: 'https://www.stradivarius.com/es/' },
+  { name: 'Pull&Bear', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Página de mujer de Pull&Bear: denim, sudaderas y básicos informales.', url: 'https://www.pullandbear.com/es/mujer-n6417' },
+  { name: 'Oysho', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Deporte y básicos', tone: 'neutral', desc: 'Web oficial de Oysho para deporte, ropa interior y prendas cómodas.', url: 'https://www.oysho.com/es/' },
+  { name: 'Bershka', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Página oficial de mujer. Pulsa Black Friday en portada cuando esté disponible.', url: 'https://www.bershka.com/es/h-woman.html' },
+  { name: 'Calzedonia', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Lencería y medias', tone: 'neutral', desc: 'Web oficial; Black Friday y otras promociones aparecen en el menú.', url: 'https://www.calzedonia.com/es/' },
+  { name: 'Cortefiel', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Página oficial de mujer con acceso a promociones desde su menú.', url: 'https://cortefiel.com/es/es/mujer' },
+  { name: 'Etam', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Lencería', tone: 'neutral', desc: 'Web oficial española de lencería, pijamas y básicos.', url: 'https://www.etam.es/' },
+  { name: 'Intimissimi', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Lencería', tone: 'neutral', desc: 'Web oficial española de lencería, pijamas y punto fino.', url: 'https://www.intimissimi.com/es/' },
+  { name: 'New Yorker', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Página oficial española para moda urbana y tendencias.', url: 'https://www.newyorker.de/es/' },
+  { name: 'Women’secret', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Pijamas y lencería', tone: 'neutral', desc: 'Página oficial; revisa las ofertas y promociones desde su menú.', url: 'https://womensecret.com/es/es' },
+  { name: 'Tezenis', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Básicos', tone: 'neutral', desc: 'Web oficial de Tezenis con promociones activas en portada.', url: 'https://www.tezenis.com/es/' },
+  { name: 'Parfois', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Bolsos y accesorios', tone: 'neutral', desc: 'Web oficial española de bolsos, bisutería y accesorios.', url: 'https://www.parfois.com/es/es/' },
+  { name: 'Décimas', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda deportiva', tone: 'neutral', desc: 'Ropa, calzado y accesorios deportivos para mujer y familia.', url: 'https://www.decimas.com/es-es/mujer' },
+  { name: 'Inside', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Moda urbana y casual para mujer.', url: 'https://inside-shops.com/es/' },
+  { name: 'Jack & Jones', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda hombre', tone: 'neutral', desc: 'Ropa, calzado y complementos de estilo casual.', url: 'https://www.jackjones.com/es-es' },
+  { name: 'JD Sports', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda y calzado deportivo', tone: 'neutral', desc: 'Moda deportiva, zapatillas y accesorios.', url: 'https://www.jdsports.es/' },
+  { name: 'Koröshi', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer, hombre e infantil', tone: 'neutral', desc: 'Moda urbana para mujer, hombre y niños.', url: 'https://koroshishop.com/' },
+  { name: 'Krack', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Calzado y accesorios', tone: 'neutral', desc: 'Calzado y complementos para mujer.', url: 'https://www.krackonline.com/' },
+  { name: 'Merkal', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Calzado', tone: 'neutral', desc: 'Calzado y complementos para toda la familia.', url: 'https://www.merkal.com/' },
+  { name: 'Rock & Shoes', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Calzado', tone: 'neutral', desc: 'Calzado y complementos.', url: 'https://www.rockandshoes.com/' },
+  { name: 'Skechers', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Calzado y ropa deportiva', tone: 'neutral', desc: 'Zapatillas, ropa y accesorios deportivos.', url: 'https://www.skechers.es/' },
+  { name: 'Snipes', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda urbana y sneakers', tone: 'neutral', desc: 'Moda streetwear, zapatillas y accesorios.', url: 'https://www.snipes.com/es-es/' },
+  { name: 'Springfield', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Moda mujer', tone: 'neutral', desc: 'Moda casual para mujer y hombre.', url: 'https://myspringfield.com/es/es' },
+  { name: 'Swarovski', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Joyería y accesorios', tone: 'neutral', desc: 'Joyería, relojes y accesorios.', url: 'https://www.swarovski.com/es-ES/' },
+  { name: 'Tabú Complementos', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Complementos', tone: 'neutral', desc: 'Complementos y accesorios de moda.', url: 'https://www.centrovallereal.com/tiendas/' },
+  { name: 'Time Road', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Relojería y accesorios', tone: 'neutral', desc: 'Relojes y complementos.', url: 'https://www.timeroad.com/' },
+  { name: 'Tous', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Joyería y accesorios', tone: 'neutral', desc: 'Joyería, bolsos y accesorios.', url: 'https://www.tous.com/es-es/' },
+  { name: 'Mira Mira', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Joyería y accesorios', tone: 'neutral', desc: 'Joyería y bisutería. Web oficial de Miramira.', url: 'https://miramiraofficial.es/' },
+  { name: 'Ulanka', zone: 'valle', area: 'Valle Real · Maliaño', status: 'Calzado y accesorios', tone: 'neutral', desc: 'Calzado y accesorios para mujer y hombre.', url: 'https://ulanka.com/' },
+  { name: 'Brownie · Centro', zone: 'centro', area: 'Centro Santander · Juan Herrera 12', status: 'Tienda física', tone: 'live', desc: 'Tienda Brownie independiente en el centro de Santander.', url: 'https://www.browniespain.com/es-es' },
+  { name: 'Mango Centro', zone: 'centro', area: 'Centro Santander · Lealtad 14', status: 'Moda mujer', tone: 'live', desc: 'Web oficial de Mango: entra en la promoción activa desde portada.', url: 'https://shop.mango.com/es/es' },
+  { name: 'Zara Centro', zone: 'centro', area: 'Centro Santander · Lealtad 17', status: 'Moda mujer', tone: 'live', desc: 'Tienda Zara del centro de Santander. Enlace a moda mujer.', url: 'https://www.zara.com/es/es/mujer-l1000.html' },
+  { name: 'Oysho Centro', zone: 'centro', area: 'Centro Santander · Lealtad 5', status: 'Moda y ropa interior', tone: 'live', desc: 'Tienda Oysho del centro de Santander.', url: 'https://www.oysho.com/es/' },
+  { name: 'Stradivarius Centro', zone: 'centro', area: 'Centro Santander · Jesús de Monasterio 25', status: 'Moda mujer', tone: 'live', desc: 'Tienda Stradivarius del centro de Santander.', url: 'https://www.stradivarius.com/es/' }
+];
+
+</script>
+<script>
+// Catálogo oficial de Perfumería y cosmética de El Corte Inglés Santander.
+const beautyStores = [{"name":"Chanel","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/chanel","brandUrl":"https://www.chanel.com/es/"},{"name":"Clarins","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/clarins","brandUrl":"https://www.clarins.es/"},{"name":"Cocunat","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/cocunat","brandUrl":"https://cocunat.com/es-es/"},{"name":"Dior Parfums","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/dior-parfums","brandUrl":"https://www.dior.com/es_es"},{"name":"Giorgio Armani","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/giorgio-armani","brandUrl":"https://www.armanibeauty.es/"},{"name":"Givenchy","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/givenchy","brandUrl":"https://www.givenchybeauty.com/es/"},{"name":"Imetec","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/imetec","brandUrl":null},{"name":"Jeanne Piaubert","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/jeanne-piaubert","brandUrl":"https://jeannepiaubert.com/es"},{"name":"Jo Malone London","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/jo-malone","brandUrl":"https://www.jomalone.es/"},{"name":"Juvena","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/juvena","brandUrl":null},{"name":"Kanebo","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/kanebo","brandUrl":"https://www.kanebo-global.com/global/en/"},{"name":"Kiehl´s","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/kiehl-s","brandUrl":"https://www.kiehls.es/"},{"name":"L'Occitane","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/loccitane-1","brandUrl":"https://es.loccitane.com/"},{"name":"La Prairie","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/la-prairie","brandUrl":"https://www.laprairie.com/es-es"},{"name":"Lalique","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y cosmética","tone":"neutral","desc":"Perfumes y cosmética. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/lalique","brandUrl":null},{"name":"Lancaster","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/lancaster","brandUrl":null},{"name":"Lancôme","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/lancome","brandUrl":"https://www.lancome.es/"},{"name":"Loewe","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/loewe","brandUrl":"https://www.perfumesloewe.com/es/en_ES/our-selection/fragrances/"},{"name":"MAC Cosmetics","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/mac-cosmetics","brandUrl":"https://www.maccosmetics.es/"},{"name":"Mandarina Duck","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/mandarina-duck","brandUrl":null},{"name":"Michael Kors","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/michael-kors","brandUrl":"https://www.michaelkors.es/mujer/accesorios/fragancias/"},{"name":"Montana","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/montana","brandUrl":null},{"name":"Moschino","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/moschino","brandUrl":null},{"name":"Nina Ricci","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/nina-ricci","brandUrl":"https://www.ninaricci.com/es-eu"},{"name":"Oilily","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/oilily","brandUrl":null},{"name":"Paco Rabanne","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/paco-rabanne","brandUrl":null},{"name":"Palson","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/palson","brandUrl":null},{"name":"Panasonic","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/panasonic","brandUrl":"https://www.panasonic.com/es/"},{"name":"Philips","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/philips","brandUrl":"https://www.philips.es/"},{"name":"Prada","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y cosmética","tone":"neutral","desc":"Perfumes y cosmética. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/prada","brandUrl":null},{"name":"Remington","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/remington","brandUrl":"https://es.remington-europe.com/"},{"name":"Roberto Cavalli","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/roberto-cavalli","brandUrl":"https://www.robertocavalli.com/es-es/explore-perfume"},{"name":"Rochas","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/rochas","brandUrl":"https://www.rochas.com/es"},{"name":"Rowenta","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/rowenta","brandUrl":"https://www.rowenta.es/"},{"name":"Shiseido","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/shiseido","brandUrl":"https://www.shiseido.es/"},{"name":"Sisley","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/sisley","brandUrl":"https://www.sisley-paris.com/es-ES/"},{"name":"Solac","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Herramientas de belleza","tone":"neutral","desc":"Herramientas de belleza. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/solac","brandUrl":"https://www.solac.com/"},{"name":"Tabac","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/tabac","brandUrl":null},{"name":"Ted Lapidus","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/ted-lapidus","brandUrl":null},{"name":"Thierry Mugler","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/thierry-mugler","brandUrl":null},{"name":"Tom Ford","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/tom-ford","brandUrl":null},{"name":"Versace","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y fragancias","tone":"neutral","desc":"Perfumes y fragancias. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/versace","brandUrl":null},{"name":"When","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Cuidado y maquillaje","tone":"neutral","desc":"Cuidado y maquillaje. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/when","brandUrl":null},{"name":"Yves Saint Laurent","zone":"eci","area":"El Corte Inglés · Bahía de Santander","status":"Perfumes y cosmética","tone":"neutral","desc":"Perfumes y cosmética. Marca incluida en el catálogo oficial de El Corte Inglés Santander.","url":"https://www.elcorteingles.es/centroscomerciales/es/eci/marcas/yves-saint-laurent","brandUrl":"https://www.yslbeauty.es/"}];
+
+</script>
+<script>
+(() => {
+  const labels = { all: 'Todas las tiendas', eci: 'El Corte Inglés · Bahía de Santander', valle: 'Valle Real · Maliaño', centro: 'Centro Santander' };
+  const zoneNames = { eci: 'El Corte Inglés', valle: 'Valle Real', centro: 'Centro Santander' };
+  const catalog = { fashion: stores, beauty: beautyStores };
+  const cards = document.querySelector('#cards'), menu = document.querySelector('#shop-menu'), counter = document.querySelector('#counter');
+  const title = document.querySelector('#view-title'), kicker = document.querySelector('#results-kicker'), search = document.querySelector('#search');
+  const favoritesFilter = document.querySelector('#favorites-filter'), favoritesCount = document.querySelector('#favorites-count'), emptyState = document.querySelector('#empty-state');
+  const shopDetails = document.querySelector('#shop-details'), shopCount = document.querySelector('#shop-count'), saleNote = document.querySelector('#sale-note');
+  const favoriteKey = 'janella-favorite-stores-v2';
+  const eciOffers = {
+    'Sfera': [{ title:'Campaña El Corte Inglés', discount:'Hasta −40% en selección', extra:'+15% de regalo*', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'23–27 nov 2026', starts:'2026-11-23', ends:'2026-11-27', url:'https://www.elcorteingles.es/marcas/sfera/', kind:'eci' }],
+    'Easy Wear': [{ title:'Campaña El Corte Inglés', discount:'Hasta −30% en selección', extra:'+15% de regalo*', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'23–29 nov 2026', starts:'2026-11-23', ends:'2026-11-29', url:'https://www.elcorteingles.es/marcas/easy-wear/', kind:'eci' }],
+    'Woman El Corte Inglés': [{ title:'Campaña El Corte Inglés', discount:'Hasta −20% en selección', extra:'+15% de regalo*', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'23–27 nov 2026', starts:'2026-11-23', ends:'2026-11-27', url:'https://www.elcorteingles.es/marcas/woman-el-corte-ingles/moda-mujer/ropa/', kind:'eci' }],
+    'Green Coast': [{ title:'Campaña El Corte Inglés', discount:'Hasta −40% en selección', extra:'+15% de regalo*', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'23–29 nov 2026', starts:'2026-11-23', ends:'2026-11-29', url:'https://www.elcorteingles.es/marcas/green-coast/', kind:'eci' }],
+    'Tintoretto': [{ title:'Campaña El Corte Inglés', discount:'Hasta −30% en selección', extra:'+15% de regalo*', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'23–27 nov 2026', starts:'2026-11-23', ends:'2026-11-27', url:'https://www.elcorteingles.es/marcas/tintoretto/', kind:'eci' }],
+    'The-Are': [{ title:'Black Friday THE-ARE', discount:'Hasta −50% en selección', channels:['Web marca','Tiendas propias','Puntos de venta ECI'], dates:'Desde 26 nov · hasta 1 dic 2026', starts:'2026-11-26', ends:'2026-12-01', url:'https://www.the-are.com/pages/ropa-mujer-black-friday', kind:'brand', note:'La marca indica mismas ofertas en web, tiendas propias y puntos de venta de El Corte Inglés.' }],
+    'Zadig & Voltaire': [{ title:'Zadig Days · web de marca', discount:'Hasta −40% en selección', extra:'−10% adicional al comprar 2 artículos rebajados', channels:['Web marca · activa'], dates:'25 nov 16:30 – 1 dic 10:00 2026', starts:'2026-11-25', ends:'2026-12-01', url:'https://zadig-et-voltaire.com/eu/es/c/see-everything-222', kind:'brand', note:'La oferta se limita a productos seleccionados; la página consultada no confirma las mismas condiciones en ECI.' }],
+    'YUXUS': [{ title:'Black Friday YUXUS', discount:'Hasta −50% en la web', channels:['Web marca · activa'], dates:'Acceso general desde 17 nov · fin no publicado', starts:'2026-11-17', url:'https://www.yuxus.com/es/pages/black-friday', kind:'brand', note:'La web muestra la campaña y descuentos; no encontré confirmación de que esta oferta propia se replique en El Corte Inglés.' }],
+    'Victoria': [{ title:'Black Friday Victoria · web', discount:'Descuento aún no indicado', channels:['Web marca · desde jue. 26/11 a las 20:00'], dates:'Empieza 26 nov 2026 a las 20:00 · fin no publicado', starts:'2026-11-26', url:'https://www.victoriashoes.com/es_ES/black-friday/', kind:'pending', note:'La web oficial anuncia el inicio, pero todavía no publica el porcentaje. No confirma la aplicación en ECI.' }],
+    'Bimba y Lola': [
+      { title:'Web, app y tiendas Bimba y Lola', discount:'Descuentos variables en selección', channels:['Web marca','App marca','Tiendas marca'], dates:'23–29 nov 2026', url:'https://www.bimbaylola.com/es_es/', kind:'brand' },
+      { title:'En El Corte Inglés', discount:'Revisar artículo a artículo', channels:['Web ECI','App ECI','Tiendas ECI'], dates:'25–29 nov 2026', url:'https://www.elcorteingles.es/black-friday/moda-mujer/', kind:'pending', note:'La marca confirma participación en ECI, pero no publica un porcentaje específico para esta tienda.' }
+    ],
+    'Brownie': [{ title:'Web Brownie', discount:'Hasta −50% en selección', channels:['Web marca'], dates:'Visible el 26 nov · fin no publicado', url:'https://www.browniespain.com/es-es/', kind:'brand', note:'La web muestra productos rebajados; la fecha del contador de Brownie Friday no se pudo leer.' }],
+    'Barbour': [{ title:'Web Barbour ROW', discount:'Sin oferta local confirmada', channels:['Web ROW · revisar'], dates:'Sin fecha publicada', url:'https://www.barbour.com/row/', kind:'pending', note:'Las promociones de otras regiones no se aplican automáticamente a España.' }],
+    'Carolina Herrera': [{ title:'Web Carolina Herrera', discount:'Hasta −25% en selección', channels:['Web marca · activa'], dates:'Visible el 26 nov · fin no publicado', url:'https://www.carolinaherrera.com/es/es', kind:'brand', note:'La portada anuncia Black Friday; no indica fecha de fin ni disponibilidad en tienda física.' }],
+    'Gloria Ortiz': [{ title:'Micolet · marketplace', discount:'Precios variables por anuncio', channels:['Web marketplace'], dates:'Sin campaña/fecha BF confirmada', url:'https://www.micolet.com/gloria-ortiz', kind:'pending', note:'Este enlace lleva a anuncios de segunda mano, no a la web oficial de Gloria Ortiz.' }],
+    'Desigual': [{ title:'Black Friday Desigual', discount:'Descuento variable por artículo', channels:['Web marca · desde 27/11','Tiendas marca · desde 27/11'], dates:'Empieza 27 nov 2026 · fin no indicado', url:'https://www.desigual.com/es_ES/', kind:'brand', note:'El club Desigual tiene acceso anticipado, pero la fecha no se publica en la página consultada.' }],
+    'Adolfo Domínguez': [{ title:'Black Friday · web de marca', discount:'Descuentos variables en selección', channels:['Web marca · activa'], dates:'Visible el 26 nov · inicio y fin no publicados', url:'https://www.adolfodominguez.com/es-es/mujer/black-friday/ver-todo/', kind:'brand', note:'Hay una selección Black Friday con precios rebajados; la web no concreta fechas ni promoción en tiendas.' }],
+    'Lauren Ralph Lauren': [{ title:'Black Friday · web Ralph Lauren', discount:'−30% en selección', extra:'Pedido superior a 150 €', channels:['Solo web Ralph Lauren'], dates:'22–30 nov 2026', url:'https://www.ralphlauren.es/es/cyber-weekend/71802', kind:'brand', note:'Se aplica automáticamente en cesta a artículos etiquetados. No incluye compra en El Corte Inglés.' }],
+    'Hugo Boss Woman': [{ title:'Black Friday BOSS · web', discount:'Hasta −30% en selección', channels:['Web BOSS · activa'], dates:'Visible el 26 nov · fin no especificado', url:'https://www.hugoboss.com/es/home', kind:'brand', note:'La web española muestra el evento Black Friday y descuentos variables; no confirma aquí la disponibilidad en tienda ECI.' }],
+    'Clarins': { discount: 'Hasta −40% en selección', url: 'https://www.elcorteingles.es/black-friday/perfumeria/' },
+    'Shiseido': { discount: 'Hasta −40% en selección', url: 'https://www.elcorteingles.es/black-friday/perfumeria/' },
+    'Yves Saint Laurent': { discount: 'Hasta −45% en selección', url: 'https://www.elcorteingles.es/black-friday/perfumeria/' }
+  };
+  const valleOffers = {
+    'Mango': [{title:'Black Friday Mango',discount:'Hasta −50% en artículos seleccionados',channels:['Web marca','Tiendas marca'],dates:'23–30 nov 2026',starts:'2026-11-23',ends:'2026-11-30',url:'https://shop.mango.com/es/es',kind:'brand',note:'La promoción se aplica a una selección de otoño/invierno y hasta fin de existencias.'}],
+    'H&M': [{title:'Black Friday H&M',discount:'Hasta −40% en la app',extra:'Compra mínima 50 € · miembros H&M',channels:['App H&M · miembros'],dates:'Campaña activa · fecha final no visible',url:'https://www2.hm.com/es_es/mujer.html',kind:'brand',note:'La web oficial anuncia el descuento de Black Friday para miembros; comprueba términos y artículos participantes en la app.'}],
+    'Zara': [{title:'Black Friday Zara',discount:'−40% en artículos seleccionados',channels:['Online y tiendas · desde hoy a las 20:00'],dates:'Empieza hoy, 26 nov 2026 · fin no indicado',starts:'2026-11-26',url:'https://www.zara.com/es/es/mujer-l1000.html',kind:'brand',note:'Oferta y hora confirmadas en la imagen compartida. Comprueba qué artículos participan.'}],
+    'Bershka': [{title:'Black Friday Bershka',discount:'−30% a −50% en artículos seleccionados',channels:['App y web · desde 26/11 20:00','Tiendas · desde 27/11'],dates:'26–27 nov 2026 · selección limitada',starts:'2026-11-26',ends:'2026-11-27',url:'https://www.bershka.com/es/h-woman.html',kind:'brand',note:'La página oficial indica vigencia hasta el 27/11 en artículos seleccionados.'}],
+    'Stradivarius': [{title:'Black Friday Stradivarius',discount:'Hasta −40% en selección',channels:['Web marca · activa'],dates:'Selección visible · fin no indicado',url:'https://www.stradivarius.com/es/mujer/black-friday/ropa/todo-n2844',kind:'brand',note:'La web muestra prendas rebajadas; no publica una fecha de fin en la selección consultada.'}],
+    'Pull&Bear': [{title:'Pull&Friday',discount:'−40% en selección de moda mujer',channels:['Web marca · activa'],dates:'Black Friday 2026 · fin no indicado',url:'https://www.pullandbear.com/es/mujer/ropa/pull-friday-n7231',kind:'brand',note:'La página oficial detalla el descuento, pero no muestra una fecha de finalización.'}],
+    'Calzedonia': [{title:'Black Friday Calzedonia',discount:'Hasta −50% en artículos seleccionados',channels:['Web marca · oferta visible'],dates:'Fechas exactas no publicadas',url:'https://www.calzedonia.com/es/mujer/',kind:'brand',note:'La página de Black Friday indica que la campaña terminó, aunque la portada todavía muestra artículos seleccionados con hasta −50%; comprobar la ficha antes de comprar.'}],
+    'Intimissimi': [{title:'Black Friday Intimissimi',discount:'−50% en selección',extra:'Solo miembros My Intimissimi',channels:['Web marca · hasta 26/11'],dates:'23–26 nov 2026',starts:'2026-11-23',ends:'2026-11-26',url:'https://www.intimissimi.com/es/mujer/black_friday/',kind:'brand',note:'Oferta para miembros; no acumulable. La ficha online consultada no confirma condiciones idénticas en tienda.'}],
+    'Women’secret': [{title:'Black Friday Women’secret',discount:'Hasta −50%',extra:'+15% extra con código 15EXTRA',channels:['Web marca · activa','App · adelanto exclusivo'],dates:'Fechas de inicio y fin no publicadas',url:'https://womensecret.com/es/es/mujer/black-friday',kind:'brand',note:'La portada anuncia el código y el adelanto en app; comprueba términos y vigencia antes de pagar.'}],
+    'Springfield': [{title:'Black Friday Springfield',discount:'Hasta −50% en selección',extra:'Desde −30% en todo',channels:['Web marca · campaña activa'],dates:'Fechas exactas no publicadas',url:'https://myspringfield.com/es/es/mujer/black-friday',kind:'brand',note:'La portada oficial anuncia ambas condiciones; los porcentajes mayores dependen de artículos concretos.'}],
+    'Oysho': [{title:'Black Friday Oysho',discount:'−30% en artículos seleccionados',channels:['Web · hoy, 26/11','Tiendas · desde viernes 27/11'],dates:'Online 26 nov · tiendas desde 27 nov 2026',starts:'2026-11-26',url:'https://www.oysho.com/es/',kind:'brand',note:'Según la captura, la oferta online empieza hoy y en tiendas el viernes. La fecha final no aparece.'}],
+    'Etam': [
+      {title:'Black Friday Etam',discount:'Hasta −40% en selección',channels:['Web marca · campaña visible'],dates:'Fechas no visibles en la captura',url:'https://www.etam.es/',kind:'brand',note:'La página muestra prendas seleccionadas con −40%. La captura no permite confirmar inicio ni fin.'},
+      {title:'Pack de braguitas',discount:'5 por 35 € · 7 por 45 € · 10 por 55 €',channels:['Web marca · revisar condiciones'],dates:'Vigencia no indicada',url:'https://www.etam.es/',kind:'brand',note:'Promoción anunciada en la franja superior de la web; comprobar condiciones y productos participantes.'}
+    ],
+    'Tezenis': [{title:'Black Friday Tezenis',discount:'Hasta −50% en selección',channels:['Web y app · desde 20/11','Tiendas · 23–30/11'],dates:'Web y app desde 20 nov · tiendas hasta 30 nov 2026',starts:'2026-11-20',ends:'2026-11-30',url:'https://www.tezenis.com/es/',kind:'brand',note:'La promoción de tienda física termina el 30/11/2026 a las 23:59. Según la captura, web y app comenzaron el 20/11.'}],
+    'Cortefiel': [{title:'Promociones Cortefiel',discount:'Descuentos variables por artículo',channels:['Web marca · consultar producto'],dates:'Black Friday activo · fechas exactas no confirmadas',url:'https://cortefiel.com/es/es/mujer',kind:'pending',note:'En la página consultada no pude confirmar un porcentaje global ni su periodo para mujer.'}],
+    'Inside': [{title:'Black Friday Inside',discount:'Descuentos variables en selección',channels:['Web marca · artículos rebajados'],dates:'Fechas no publicadas',url:'https://inside-shops.com/es/',kind:'brand',note:'Hay artículos rebajados, pero no una ventana de campaña clara en la página consultada.'}],
+    'Parfois': [{title:'Black Friday Parfois',discount:'Hasta −50% en artículos seleccionados',channels:['App · venta anticipada','Web · desde las 18:00'],dates:'Hora de acceso anticipado anunciada · fecha no visible',url:'https://www.parfois.com/es/es/',kind:'brand',note:'La captura anuncia venta anticipada en la app y acceso en parfois.com a las 18:00; no muestra el día ni confirma las tiendas físicas.'}],
+    'Décimas': [{title:'Black Friday Décimas',discount:'Hasta −40% en productos seleccionados',channels:['Solo tienda online'],dates:'19 nov – 1 dic 2026',starts:'2026-11-19',ends:'2026-12-01',url:'https://www.decimas.com/es-es/mujer',kind:'brand',note:'La captura limita el descuento a productos seleccionados de la tienda online.'}],
+    'JD Sports': [{title:'Black Friday JD Sports',discount:'Hasta −50% de descuento',channels:['Web JD Sports'],dates:'Fechas y selección no visibles en la captura',url:'https://www.jdsports.es/',kind:'brand',note:'La portada muestra la campaña Black Friday con hasta −50%; revisar productos y condiciones en la web.'}],
+    'Krack': [{title:'Black Friday Krack',discount:'Hasta −50% en selección',channels:['Web Krack'],dates:'Fechas no visibles en la captura',url:'https://www.krackonline.com/',kind:'brand',note:'La campaña anuncia descuentos en selección. La captura indica devoluciones ampliadas hasta el 11 de enero.'}],
+    'Snipes': [{title:'Black Week Snipes',discount:'Hasta −50%',extra:'−5% extra para SNIPES Club',channels:['Web Snipes'],dates:'Fechas no visibles en la captura',url:'https://www.snipes.com/es-es/',kind:'brand',note:'La ventaja adicional se anuncia para miembros SNIPES Club; revisar condiciones de productos y vigencia.'}],
+    'Swarovski': [{title:'Black Friday Swarovski',discount:'Hasta −40% en estilos seleccionados',extra:'−20% adicional al comprar 2 o más productos Black Friday',channels:['Web Swarovski'],dates:'Fechas no visibles en la captura',url:'https://www.swarovski.com/es-ES/',kind:'brand',note:'Las dos ventajas aparecen en la campaña; comprobar condiciones legales y artículos participantes.'}],
+    'Tous': [{title:'Black Friday TOUS',discount:'Hasta −50% en artículos seleccionados',extra:'10% de descuento al comprar 2 unidades o más',channels:['Web TOUS'],dates:'Fechas no visibles en la captura',url:'https://www.tous.com/es-es/',kind:'brand',note:'La captura muestra ambas promociones y remite a las condiciones legales; confirmar si son acumulables.'}],
+    'Mira Mira': [{title:'Promoción Miramira',discount:'Compra 3 y llévate 4 · la cuarta gratis',channels:['Toda la web'],dates:'Oferta visible · vigencia no publicada',url:'https://miramiraofficial.es/',kind:'brand',note:'La web oficial anuncia el 3+1 en toda la web; confirmar condiciones y producto gratuito en el carrito.'}],
+    'New Yorker': [{title:'Descuentos New Yorker',discount:'Descuentos variables en distintas prendas',channels:['Web marca · por artículo'],dates:'Sin periodo general indicado',url:'https://www.newyorker.de/es/',kind:'brand',note:'No hay un porcentaje único: las rebajas varían según la prenda.'}],
+    'Jack & Jones': [{title:'Black Friday Jack & Jones',discount:'−25% en artículos a precio original',extra:'Solo miembros · requiere cupón',channels:['Online · iniciando sesión en MyAccount','Tiendas físicas seleccionadas'],dates:'19–30 nov 2026 · o hasta agotar existencias',starts:'2026-11-19',ends:'2026-11-30',url:'https://www.jackjones.com/es-es',kind:'brand',note:'Excepto tarjetas regalo. No acumulable a otras ofertas. El cupón debe introducirse online o presentarse en tiendas participantes.'}],
+    'Primark': [{title:'Promociones Primark',discount:'Sin campaña general Black Friday confirmada',channels:['Solo tienda física'],dates:'Sin fechas de campaña publicadas',url:'https://www.primark.com/es-es/c/mujer',kind:'pending',note:'La web sirve para consultar productos y tienda; no confirma una promoción general de Black Friday.'}]
+  };
+  const centroOffers = {
+    'Brownie · Centro': [{title:'Black Friday Brownie',discount:'Hasta −50% en selección',channels:['Web marca'],dates:'Oferta visible el 26 nov · fin no publicado',url:'https://www.browniespain.com/es-es',kind:'brand',note:'Descuento localizado en la web de Brownie; la captura consultada no confirma que se aplique igual en la tienda de Santander.'}],
+    'Mango Centro': [{title:'Black Friday Mango',discount:'Hasta −50% en artículos seleccionados',channels:['Web marca','Tiendas Mango'],dates:'23–30 nov 2026',starts:'2026-11-23',ends:'2026-11-30',url:'https://shop.mango.com/es/es/c/mujer/black-friday--50/b4a1ea08',kind:'brand',note:'Campaña para selección de otoño/invierno y hasta fin de existencias.'}],
+    'Zara Centro': [{title:'Black Friday Zara',discount:'−40% en artículos seleccionados',channels:['Online y tiendas · desde 26/11 a las 20:00'],dates:'Desde 26 nov 2026 a las 20:00 · fin no indicado',starts:'2026-11-26',url:'https://www.zara.com/es/es/woman-special-l2397.html',kind:'brand',note:'La web oficial muestra −40% en selección desde el 26/11 a las 20:00. La captura de Zara indica online y tiendas.'}],
+    'Oysho Centro': [{title:'Black Friday Oysho',discount:'−30% en artículos seleccionados',channels:['Web · 26/11','Tiendas · desde 27/11'],dates:'Online 26 nov · tiendas desde 27 nov 2026',starts:'2026-11-26',url:'https://www.oysho.com/es/',kind:'brand',note:'Según la captura compartida, la oferta online empieza hoy y en tiendas el viernes. La fecha final no aparece.'}],
+    'Stradivarius Centro': [{title:'Black Friday Stradivarius',discount:'Hasta −40% en selección',channels:['Web marca · campaña activa'],dates:'Selección visible · fin no indicado',url:'https://www.stradivarius.com/es/mujer/black-friday/ropa/todo-n2844',kind:'brand',note:'La promoción aparece en la selección online; no se han confirmado aquí condiciones idénticas en tienda física.'}]
+  };
+  let category = 'fashion', selectedLocation = 'all', selectedShop = null, favoritesOnly = false;
+  let favorites; try { favorites = new Set(JSON.parse(localStorage.getItem(favoriteKey) || '[]')); } catch { favorites = new Set(); }
+  const esc = (v) => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const key = s => `${s.zone}:${s.name}`;
+  const list = () => catalog[category];
+  function saleBanner() {
+    if (selectedLocation !== 'eci') {
+      saleNote.innerHTML = `<strong>Ofertas por marca y canal</strong><span>En cada tarjeta verás si hay una oferta confirmada, en qué canal está disponible y sus fechas. “Pendiente de revisar” significa que aún no hemos comprobado la promoción de esa tienda.</span><div class="promo-legend"><span class="promo-tag tag-discount">Descuento directo</span><span class="promo-tag tag-extra">Regalo o bonificación extra</span><span class="promo-tag tag-bundle">Pack o 2×1</span><span class="promo-tag tag-pending">Pendiente de confirmar</span></div>`;
+      return;
+    }
+    const campaignClosed = new Date().toISOString().slice(0,10) > '2026-11-29';
+    if (campaignClosed) {
+      saleNote.innerHTML = `<div class="sale-note-heading"><strong>El Black Friday de El Corte Inglés ha terminado</strong><span>Revisa las promociones que sigan activas</span></div><div class="sale-note-footer"><small>La guía necesitará actualizarse para la siguiente campaña. Comprueba cada producto y sus condiciones en la web.</small><a href="https://www.elcorteingles.es/descuentos/" target="_blank" rel="noopener noreferrer">Ver descuentos vigentes ↗</a></div>`;
+      return;
+    }
+    const beauty = category === 'beauty';
+    const title = beauty ? 'Black Friday en perfumería y parafarmacia: hasta −35%' : 'Black Friday en moda mujer: hasta −40% + 15% de regalo*';
+    const rules = beauty ? [
+      ['Canales y fecha', 'Tienda, web y app de El Corte Inglés; campaña hasta el 29 de noviembre de 2026.'],
+      ['Qué entra', 'Solo productos seleccionados. Perfumes mujer hasta −40%; varias categorías de cosmética hasta −35%.'],
+      ['Marcas', 'Clarins y Shiseido hasta −40%, YSL hasta −45% y Kiko 6×3, según artículos y condiciones.']
+    ] : [
+      ['Canales y fecha', 'Tienda, web y app de El Corte Inglés; campaña hasta el 29 de noviembre de 2026.'],
+      ['Por marca', 'Cada tarjeta indica la oferta localizada o si queda pendiente de comprobar. El descuento concreto depende del artículo.'],
+      ['15% de regalo', 'Bonificación para otra compra, no descuento directo. Se anuncia del 23 al 27 de noviembre y tiene condiciones.']
+    ];
+    const url = beauty ? 'https://www.elcorteingles.es/black-friday/perfumeria/' : 'https://www.elcorteingles.es/black-friday/moda-mujer/';
+    saleNote.innerHTML = `<div class="sale-note-heading"><strong>${title}</strong><span>Vigente hasta el 29 de noviembre de 2026</span></div><div class="sale-rules">${rules.map(([label,text])=>`<div class="sale-rule"><b>${esc(label)}</b><span>${esc(text)}</span></div>`).join('')}</div><div class="promo-legend"><span class="promo-tag tag-discount">Descuento directo</span><span class="promo-tag tag-extra">Regalo o bonificación extra</span><span class="promo-tag tag-bundle">Pack o 2×1</span><span class="promo-tag tag-pending">Pendiente de confirmar</span></div><div class="sale-note-footer"><small>Revisado el 26/11/2026 · Próximas rebajas de invierno: previsiblemente en enero, fechas aún sin anunciar.</small><a href="${url}" target="_blank" rel="noopener noreferrer">Ver campaña oficial ↗</a></div>`;
+  }
+  function renderMenu() {
+    const items = list().map((store, index) => ({store,index})).filter(({store}) => selectedLocation === 'all' || store.zone === selectedLocation);
+    const grouped = selectedLocation === 'all' ? ['eci','valle','centro'].map(zone => ({zone,items:items.filter(x=>x.store.zone===zone)})) : [{zone:selectedLocation,items}];
+    shopCount.textContent = `${items.length} marcas`;
+    menu.innerHTML = `<button type="button" data-store="all" class="${selectedShop===null?'is-active':''}"><span>Todas las tiendas</span><span class="menu-count">${items.length}</span></button>` + grouped.map(group => `<span class="menu-location">${esc(zoneNames[group.zone])}</span>${group.items.map(({store,index})=>`<button type="button" data-store="${index}" class="${selectedShop===index?'is-active':''}"><span>${esc(store.name)}</span>${favorites.has(key(store))?'<span class="menu-count">♥</span>':''}</button>`).join('')}`).join('');
+    menu.querySelectorAll('[data-store]').forEach(button=>button.addEventListener('click',()=>{const value=button.dataset.store;if(value==='all') selectedShop=null; else {selectedShop=Number(value);selectedLocation=list()[selectedShop].zone;syncLocations();} render();}));
+  }
+  function cardMarkup(store,index) {
+    const favorite=favorites.has(key(store));
+    const link = (url,label,secondary=false) => `<a class="store-link${secondary?' store-link-secondary':''}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
+    const linkLabel=store.name.includes('Todas las marcas')?'Ver catálogo completo':category==='beauty'?'Visitar web oficial':'Visitar web';
+    const target=category==='beauty'&&store.brandUrl?store.brandUrl:store.url;
+    const badge=store.name.includes('Todas las marcas')?store.status:store.zone==='eci'?(category==='beauty'?'Marca independiente':store.status):store.status;
+    const eciCard=store.zone==='eci'&&!store.name.includes('Todas las marcas');
+    const offer=eciCard?eciOffers[store.name]:store.zone==='valle'?valleOffers[store.name]:store.zone==='centro'?centroOffers[store.name]:null;
+    const bfEnded=new Date().toISOString().slice(0,10)>'2026-11-29';
+    const promotion=store.promotion;
+    const offerList = Array.isArray(offer) ? offer : offer ? [offer] : [];
+    if (promotion) offerList.unshift({title:'Promoción comunicada por Janella',discount:promotion.discount,channels:promotion.channels.map(c=>`${c.label} · ${c.state}`),dates:`${promotion.updatedAt} · ${promotion.validUntil}`,url:promotion.source,kind:'brand',note:'Dato facilitado por la usuaria; confirmar condiciones y disponibilidad en la web antes de comprar.'});
+    if (eciCard && store.status==='Marca independiente' && !offerList.some(item=>/El Corte Inglés/.test(item.title||''))) offerList.push({title:'Compra en El Corte Inglés',discount:'Participación de esta marca sin confirmar',channels:['Web ECI','App ECI','Tiendas ECI'],dates:'Campaña general ECI · 23–29 nov 2026',starts:'2026-11-23',ends:'2026-11-29',url:'https://www.elcorteingles.es/black-friday/moda-mujer/',kind:'pending',note:'La campaña general anuncia descuentos en artículos seleccionados, pero no confirma esta marca. La oferta de su web propia no implica el mismo descuento en ECI.'});
+    if (eciCard && !offerList.length && !store.name.includes('Todas las marcas')) offerList.push({title:'Campaña El Corte Inglés',discount:bfEnded?'Campaña Black Friday finalizada':'Oferta concreta pendiente de confirmar',channels:bfEnded?['Consultar web ECI']:['Web ECI','App ECI','Tiendas ECI'],dates:bfEnded?'Consultar promociones vigentes':'Campaña general hasta 29 nov 2026',url:bfEnded?'https://www.elcorteingles.es/descuentos/':'https://www.elcorteingles.es/black-friday/moda-mujer/',kind:'pending',note:'La campaña general no garantiza que esta marca o todos sus artículos estén incluidos.'});
+    if (store.zone!=='eci' && !offerList.length) offerList.push({title:'Estado de la oferta',discount:'Promoción pendiente de revisar',channels:['Web','Tienda · revisar'],dates:'Sin fechas verificadas',url:store.url,kind:'pending',note:'Consulta la página oficial para confirmar la oferta y sus condiciones.'});
+    const offerMarkup=eciCard||store.zone!=='eci'?offerList.map(item=>{
+      const today=new Date().toISOString().slice(0,10), expired=item.ends&&today>item.ends, upcoming=item.starts&&today<item.starts;
+      const kind=expired||upcoming?'pending':(item.kind||'pending');
+      const tags=[item.discount?`<span class="promo-tag ${kind==='pending'?'tag-pending':'tag-discount'}">${esc(item.discount)}</span>`:'',item.extra?`<span class="promo-tag ${kind==='pending'?'tag-pending':'tag-extra'}">${esc(item.extra)}</span>`:'',expired?'<span class="promo-tag tag-pending">Finalizada</span>':upcoming?'<span class="promo-tag tag-pending">Próximamente</span>':''].filter(Boolean).join('');
+      const channelMarkup=(item.channels||['Canal por confirmar']).map(channel=>`<span class="channel-tag ${/activa|desde|web eci|app eci|tiendas eci|web marca|app marca|tiendas marca|solo web/i.test(channel)?'channel-active':'channel-pending'}">${esc(channel)}</span>`).join('');
+      const href=item.url||store.url;
+      return `<div class="card-offer ${kind==='pending'?'offer-pending':'offer-live'}"><span>${esc(item.title||'Estado de la oferta')}</span><div class="promo-tags">${tags}</div><strong>${esc(item.dates||'Fecha no publicada')}</strong><div class="offer-channels">${channelMarkup}</div>${item.note?`<small>${esc(item.note)}</small>`:''}<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">Ver condiciones y artículos ↗</a></div>`;
+    }).join(''):'';
+    return `<article class="store-card"><div class="card-topline"><span class="card-place">${esc(store.zone==='eci'?'El Corte Inglés':store.area)}</span><button class="favorite-button" type="button" data-favorite="${index}" aria-label="${favorite?'Quitar de':'Añadir a'} mis favoritas: ${esc(store.name)}" aria-pressed="${favorite}">${favorite?'♥':'♡'}</button></div><h3>${esc(store.name.replace(' · ECI',''))}</h3><span class="card-status ${esc(store.tone)}">${esc(badge)}</span><p>${esc(store.desc)}</p>${offerMarkup}<div class="card-links">${link(target,linkLabel)}</div></article>`;
+  }
+  function render() {
+    const all=list(); renderMenu(); saleBanner();
+    const query=search.value.trim().toLocaleLowerCase('es');
+    const visible=all.map((store,index)=>({store,index})).filter(({store})=>selectedLocation==='all'||store.zone===selectedLocation).filter(({index})=>selectedShop===null||index===selectedShop).filter(({store})=>!favoritesOnly||favorites.has(key(store))).filter(({store})=>!query||`${store.name} ${store.area} ${store.status} ${store.desc}`.toLocaleLowerCase('es').includes(query));
+    title.textContent=selectedShop===null?labels[selectedLocation]:all[selectedShop].name;
+    kicker.textContent=favoritesOnly?'Tus marcas guardadas':category==='beauty'?'Perfumería y belleza · catálogo ECI Santander':selectedLocation==='all'?'Tus marcas favoritas de Cantabria':'Tiendas en esta zona';
+    counter.textContent=`${visible.length} ${visible.length===1?'marca':'marcas'}`; favoritesCount.textContent=String(favorites.size); favoritesFilter.setAttribute('aria-pressed',String(favoritesOnly)); favoritesFilter.querySelector('span').textContent=favoritesOnly?'♥':'♡';
+    cards.innerHTML=visible.map(({store,index})=>cardMarkup(store,index)).join(''); cards.hidden=!visible.length; emptyState.hidden=!!visible.length;
+    cards.querySelectorAll('[data-favorite]').forEach(button=>button.addEventListener('click',()=>{const store=all[Number(button.dataset.favorite)], k=key(store);favorites.has(k)?favorites.delete(k):favorites.add(k);try{localStorage.setItem(favoriteKey,JSON.stringify([...favorites]));}catch{}render();}));
+  }
+  function syncLocations(){document.querySelectorAll('[data-location]').forEach(tab=>{const active=tab.dataset.location===selectedLocation;tab.classList.toggle('is-active',active);tab.setAttribute('aria-pressed',String(active));});}
+  document.querySelectorAll('[data-location]').forEach(tab=>tab.addEventListener('click',()=>{selectedLocation=tab.dataset.location;selectedShop=null;syncLocations();render();}));
+  document.querySelectorAll('[data-category]').forEach(tab=>tab.addEventListener('click',()=>{category=tab.dataset.category;selectedLocation=category==='beauty'?'eci':'all';selectedShop=null;favoritesOnly=false;document.querySelectorAll('[data-category]').forEach(item=>{const active=item===tab;item.classList.toggle('is-active',active);item.setAttribute('aria-pressed',String(active));});syncLocations();render();}));
+  search.addEventListener('input',render); favoritesFilter.addEventListener('click',()=>{favoritesOnly=!favoritesOnly;selectedShop=null;render();});
+  document.addEventListener('keydown',event=>{if(event.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){event.preventDefault();search.focus();}if(event.key==='Escape'&&document.activeElement===search){search.value='';search.blur();render();}});
+  const desktop=window.matchMedia('(min-width: 801px)'), update=()=>{shopDetails.open=desktop.matches;};update();desktop.addEventListener('change',update);render();
+})();
+
+</script>
+</body>
+</html>
